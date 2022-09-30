@@ -34,3 +34,52 @@ public class Main{
     
     
 }
+
+
+---------------------------------------------------
+
+import java.util.*;
+
+public class Main{
+    
+    String ename;
+    int eid;
+    String edep;
+    String edes;
+    
+    public static void main(String args[]){
+        Main emp1 = new Main("John", 47899, "Accounting", "Vice President");
+        Main emp2 = new Main("Mohan", 39119, "IT", "Programmer");
+        Main emp3 = new Main("Joy" , 81774, "Manufacturing", "Engineer");
+        
+        emp1.pr();
+        emp2.pr();
+        emp3.pr();
+        
+        
+    }
+    
+    public Main(){
+        this.ename = null;
+        this.eid = 0;
+        this.edep = null;
+        this.edes = null;
+    }
+    
+    public Main(String name,int id, String dep,String des){
+        this.ename = name;
+        this.eid = id;
+        this.edep = dep;
+        this.edes = des;
+        
+    }
+    
+    public void pr(){
+        System.out.println(this.ename);
+        System.out.println(this.eid);
+        System.out.println(this.edep);
+        System.out.println(this.edes);
+    }
+    
+    
+}
