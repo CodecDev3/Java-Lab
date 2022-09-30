@@ -59,7 +59,7 @@ public class Main{
         
     }
     
-    public Main(){
+    public Main(){                              // Contructor name should be equal to class name (Main = Main)
         this.ename = null;
         this.eid = 0;
         this.edep = null;
