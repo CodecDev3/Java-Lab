@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main{
+    
+    int empno;
+    String empname;
+    double empbasic;
+    
+    public static void main(String args[]){
+        Main empsal = new Main();
+        System.out.println(empsal.employee(721,"Not Me",1000.0));
+        double s = empsal.gs();
+        System.out.println(s);
+    }
+    
+    public void employee(){
+        this.empno = 0;
+        this.empname = null;
+        this.empbasic = 0.0;
+    }
+    
+    public employee(int eno,String ename,double ebasic){
+        this.empno = eno;
+        this.empname = ename;
+        this.empbasic = ebasic;
+    }
+    
+    public double gs(){
+        double salary;
+        salary = this.empbasic + (0.45*this.empbasic) - (0.08*this.empbasic);
+        return salary;
+    }
+}
