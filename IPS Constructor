@@ -1,0 +1,36 @@
+// Coded on 30/09/22
+
+/*
+Given employee name; id; department; designation
+*/
+
+import java.util.*;
+
+public class Main{
+    
+    String ename;
+    int eid;
+    String edep;
+    String edes;
+    
+    public static void main(String args[]){
+        Main emp = new Main();
+        emp.empl();
+    }
+    
+    public empl(){
+        Scanner sc = new Scanner(System.in);
+        
+        this.ename = sc.nextLine();
+        this.eid = sc.nextInt();
+        this.edep = sc.nextLine();
+        this.edes = sc.nextLine();
+        
+        System.out.println(this.ename);
+        System.out.println(this.eid);
+        System.out.println(this.edep);
+        System.out.println(this.edes);
+    }
+    
+    
+}
