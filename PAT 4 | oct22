@@ -1,2 +1,87 @@
 // Coded on 11/10/22
 
+/*
+Every student in VIT has a unique 9-digit register number containing three parts (year, branch, and number) such as 21BCE1034. Reverse each part of the register number and generate a new phrase that denotes the student’s password to log in to Vtop. Print “Invalid” if the register number is not 9-digits. Your Java code should contain a class named Password that has the following features:
+
+Two instance variables: one for register number and the other for password
+
+a constructor to initialize the register number
+
+a generatePassword() that generates the password
+
+a displayPassword() that displays the generated password
+
+Create an object of the Password class in Main class and call the necessary methods to initialize, generate and display the password.
+
+Input Format:
+
+ 
+
+Enter the register number
+
+Output Format:
+
+Print the password
+
+ 
+
+Sample Input:
+
+21BCE1034
+
+Sample Output:
+
+12ECB4301
+
+ 
+
+Sample Input:
+
+20BEE1004
+
+Sample Output:
+
+02EEB4001
+*/
+
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        generatePassword p = new generatePassword();
+        
+        String rn = sc.nextLine();
+        
+        p.gp(rn);
+        p.dp();
+    }
+}
+
+class generatePassword{
+    
+    char ip[] = new char[9];
+    
+    void gp(String rn){                 // gp = Generate Password
+        if(rn.length()==9){
+            ip[0]=rn.charAt(1);
+            ip[1]=rn.charAt(0);
+            ip[2]=rn.charAt(4);
+            ip[3]=rn.charAt(3);
+            ip[4]=rn.charAt(2);
+            ip[5]=rn.charAt(8);
+            ip[6]=rn.charAt(7);
+            ip[7]=rn.charAt(6);
+            ip[8]=rn.charAt(5);
+        }
+        else{
+            System.out.println("Invalid");
+        }
+    }
+    
+    void dp(){                          // dp = Display Password
+        System.out.println(ip);
+    }
+    
+}
