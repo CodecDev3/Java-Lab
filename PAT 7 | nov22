@@ -1,0 +1,31 @@
+// Coded on 8/11/22
+
+/*
+You will be given two integers  x and y as input, you have to compute x/y. If  x and y are not 32 bit signed integers or if y is zero, exception will occur and you have to report it. Read sample Input/Output to know what to report in case of exceptions.
+
+Input Format
+
+The input contains two integers, x and y or y can be a string or 0 or float.
+
+Output Format
+
+The output contains the result if there is no exception or must give appropriate exceptions.
+*/
+
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+      
+        try {
+            Scanner in = new Scanner(System.in);
+            int x = in .nextInt();
+            int y = in .nextInt();
+            System.out.println(x/y);
+        } catch (ArithmeticException e) {
+            System.out.println("java.lang.ArithmeticExceptio: / by zero");
+        } catch (InputMismatchException e) {
+            System.out.println("java.util.InputMismatchException");
+        } 
+    }
+}
